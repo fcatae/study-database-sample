@@ -1,6 +1,6 @@
 SET IDENTITY_INSERT [Customer] ON 
-
 GO
+
 INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName], [LastName], [Suffix], [CompanyName], [SalesPerson], [EmailAddress], [Phone], [PasswordHash], [PasswordSalt], [rowguid], [ModifiedDate]) VALUES 
 (1, 0, N'Mr.', N'Orlando', N'N.', N'Gee', NULL, N'A Bike Store', N'adventure-works\pamela0', N'orlando0@adventure-works.com', N'245-555-0173', N'L/Rlwxzp4w7RWmEgXX+/A7cXaePEPcp+KwQhl2fJL7w=', N'1KjXYs4=', N'3f5ae95e-b87d-4aed-95b4-c3797afcb74f', CAST(N'2001-08-01T00:00:00.000' AS DateTime)),
 (2, 0, N'Mr.', N'Keith', NULL, N'Harris', NULL, N'Progressive Sports', N'adventure-works\david8', N'keith0@adventure-works.com', N'170-555-0127', N'YPdtRdvqeAhj6wyxEsFdshBDNXxkCXn+CRgbvJItknw=', N'fs1ZGhY=', N'e552f657-a9af-4a7d-a645-c429d6e02491', CAST(N'2002-08-01T00:00:00.000' AS DateTime)),
@@ -193,6 +193,7 @@ INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName]
 (295, 0, N'Mr.', N'Joseph', N'P.', N'Mitzner', N'Jr.', N'Engineered Bike Systems', N'adventure-works\shu0', N'joseph4@adventure-works.com', N'129-555-0164', N'7obarvC3BHLIE/oFo0n+bkB/EZ03Zc8Vu+F2jpK/CNM=', N'k6zgROU=', N'bb5324b1-9ace-4aae-8711-41090edce4e0', CAST(N'2003-09-01T00:00:00.000' AS DateTime)),
 (298, 0, N'Mr.', N'Robert', NULL, N'Mitosinka', NULL, N'City Cycling', N'adventure-works\josé1', N'robert10@adventure-works.com', N'239-555-0198', N'vCVsOjGm0KyeirgUeD9DQYxoh13CXTJAA03IytWGrhs=', N'mQH+E8w=', N'16101465-48b9-4147-9c53-6610feadf778', CAST(N'2003-09-01T00:00:00.000' AS DateTime)),
 (299, 0, N'Mr.', N'Thierry', NULL, N'D''Hers', NULL, N'Citywide Service and Repair', N'adventure-works\josé1', N'thierry1@adventure-works.com', N'680-555-0192', N'i+ukExAQLOnEpQFQLme/QYR8w6kME+/MdykXoSxwgFI=', N'FooiQMs=', N'1cea8d76-4a20-4d76-9da2-a3777fd7e693', CAST(N'2002-07-01T00:00:00.000' AS DateTime))
+GO
 
 INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName], [LastName], [Suffix], [CompanyName], [SalesPerson], [EmailAddress], [Phone], [PasswordHash], [PasswordSalt], [rowguid], [ModifiedDate]) VALUES 
 (300, 0, N'Mr.', N'Daniel', NULL, N'Blanco', NULL, N'Nice Bikes', N'adventure-works\garrett1', N'daniel0@adventure-works.com', N'221-555-0167', N'bnDkCXU7YCA05COiVJst0pMlaJtfAK0H8pgniBfLooM=', N'oOIbGSo=', N'7256f9b7-5253-4384-b8de-60b6f0adf5a6', CAST(N'2002-09-01T00:00:00.000' AS DateTime)),
@@ -444,6 +445,7 @@ INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName]
 (697, 0, N'Mr.', N'Roger', NULL, N'Harui', NULL, N'Brakes and Gears', N'adventure-works\linda3', N'roger0@adventure-works.com', N'774-555-0133', N'tkI9EcizphWPzkz7kDwsd2AnKnZJi3/6+V5/fIuXPpo=', N'sQMfTfM=', N'b30ce5b4-bbfa-4a57-b5c2-eed1ef13e0be', CAST(N'2001-08-01T00:00:00.000' AS DateTime)),
 (698, 0, N'Mr.', N'Andy', NULL, N'Carothers', NULL, N'Western Bike Supplies', N'adventure-works\shu0', N'andy1@adventure-works.com', N'944-555-0148', N'Q0MU0NsjDAbnQSqMBkP9Sm4G43DKXcirOnAKlzYSYnI=', N'DZ8e0Xk=', N'6bc4ff5a-0696-4c2a-88f9-08d1dba91b74', CAST(N'2002-07-01T00:00:00.000' AS DateTime)),
 (701, 0, N'Ms.', N'Linda', N'R.', N'Ecoffey', NULL, N'Future Bikes', N'adventure-works\josé1', N'linda5@adventure-works.com', N'674-555-0188', N'zM1odbx2eTJoH556dXSIqTCDa5EBj8DWUSHVo67GEGc=', N'Q5U1IZU=', N'61ae9625-8bd8-48b7-b171-8a90cbba494c', CAST(N'2002-12-01T00:00:00.000' AS DateTime))
+GO
 
 INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName], [LastName], [Suffix], [CompanyName], [SalesPerson], [EmailAddress], [Phone], [PasswordHash], [PasswordSalt], [rowguid], [ModifiedDate]) VALUES 
 (29485, 0, N'Ms.', N'Catherine', N'R.', N'Abel', NULL, N'Professional Sales and Service', N'adventure-works\linda3', N'catherine0@adventure-works.com', N'747-555-0171', N'zh3goJUbYsPv92k4bVZuJtlLHwuvpQtu6uNcjkKSdF8=', N'rpyd5Tw=', N'392ae773-d7ec-48ac-b8d0-6e65b770285c', CAST(N'2005-05-16T16:33:33.077' AS DateTime)),
@@ -592,6 +594,7 @@ INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName]
 (29722, 0, N'Mr.', N'Reuben', NULL, N'D''sa', NULL, N'Vigorous Exercise Company', N'adventure-works\josé1', N'reuben1@adventure-works.com', N'916-555-0137', N'EVeayvYSlWRfySd2RBGRSr93ST2Me+VDyAoD44WBrrg=', N'jj5f+ZA=', N'68396e18-907f-4cd5-a5f8-84d7969dac11', CAST(N'2001-09-01T00:00:00.000' AS DateTime)),
 (29727, 0, N'Mr.', N'Bart', NULL, N'Duncan', NULL, N'Stock Parts and Supplies', N'adventure-works\david8', N'bart0@adventure-works.com', N'539-555-0121', N'NJJTfbDws96bPa7Giz9Mmq+M0NSYcjlcfwpjsUnYWdE=', N'MPxWTOU=', N'ca138a8b-0d82-45b4-92e2-4de3a3fdc2f6', CAST(N'2003-08-01T00:00:00.000' AS DateTime)),
 (29728, 0, N'Mr.', N'Maciej', NULL, N'Dusza', NULL, N'Roadway Supplies', N'adventure-works\shu0', N'maciej1@adventure-works.com', N'962-555-0144', N'v404bp5zCcIyJO+s50eW4MbBxBjjkDQJe5ee5fvwBKI=', N'pDYvCjw=', N'e7fb711f-ac12-408a-a6f1-8af3428ddacb', CAST(N'2001-11-01T00:00:00.000' AS DateTime))
+GO
 
 INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName], [LastName], [Suffix], [CompanyName], [SalesPerson], [EmailAddress], [Phone], [PasswordHash], [PasswordSalt], [rowguid], [ModifiedDate]) VALUES 
 (29730, 0, N'Ms.', N'Linda', N'R.', N'Ecoffey', NULL, N'Future Bikes', N'adventure-works\josé1', N'linda5@adventure-works.com', N'674-555-0188', N'zM1odbx2eTJoH556dXSIqTCDa5EBj8DWUSHVo67GEGc=', N'Q5U1IZU=', N'651c8184-9bf1-4a57-982d-e0f35e06fcea', CAST(N'2002-12-01T00:00:00.000' AS DateTime)),
@@ -778,6 +781,7 @@ INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName]
 (29994, 0, N'Ms.', N'Robin', N'M.', N'McGuigan', NULL, N'Health Spa, Limited', N'adventure-works\josé1', N'robin0@adventure-works.com', N'431-555-0153', N'fLh6z9dFddA6FLXlQVHhI5C9QbgD7gDHv63wFwwLzx8=', N'OtAJEtc=', N'2aa52dc6-2ae5-4729-9620-2d58100d2c6a', CAST(N'2001-07-01T00:00:00.000' AS DateTime)),
 (29997, 0, N'Ms.', N'Lola', N'M.', N'McCarthy', NULL, N'Closeout Boutique', N'adventure-works\david8', N'lola0@adventure-works.com', N'173-555-0151', N'FA9j5YePslFGxxwINV2WNFLdtlbCtTK0YuF06zPc16Q=', N'ojfzrl4=', N'ddbc698b-e010-4cf0-8df6-e7062a29d4ea', CAST(N'2002-08-01T00:00:00.000' AS DateTime)),
 (29998, 0, N'Ms.', N'Jane', N'A.', N'McCarty', NULL, N'Bicycle Merchandise Warehouse', N'adventure-works\shu0', N'jane3@adventure-works.com', N'529-555-0195', N'ZoY0+khcW5IFNHszZdW3+g5b7xWZLakfBmLzPRGtfpI=', N'cpPYnNE=', N'511df11a-b292-461d-b6ca-8991747096c2', CAST(N'2002-09-01T00:00:00.000' AS DateTime))
+GO
 
 INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName], [LastName], [Suffix], [CompanyName], [SalesPerson], [EmailAddress], [Phone], [PasswordHash], [PasswordSalt], [rowguid], [ModifiedDate]) VALUES 
 (30000, 0, N'Mr.', N'James', N'L.', N'McCoy', N'II', N'Leather Seat Factory', N'adventure-works\josé1', N'james12@adventure-works.com', N'191-555-0151', N'7fCBS9M7J3qJvmN3sgO/fbT2ap3vnYQ/k+fKjaHYP/0=', N'r9owTtw=', N'f979676f-80e7-4445-b894-ce8cea7ea5e2', CAST(N'2002-07-01T00:00:00.000' AS DateTime)),
@@ -857,7 +861,9 @@ INSERT [Customer] ([CustomerID], [NameStyle], [Title], [FirstName], [MiddleName]
 (30116, 0, N'Ms.', N'Wanda', N'F.', N'Vernon', NULL, N'Technical Parts Manufacturing', N'adventure-works\shu0', N'wanda0@adventure-works.com', N'433-555-0168', N'hNQpZV8787KyeDWfllnZWzY+l8DFEYTnwoZZzYtusi0=', N'HDCU1Bk=', N'ec409609-d25d-41b8-9d15-a1aa6e89fc77', CAST(N'2003-07-01T00:00:00.000' AS DateTime)),
 (30117, 0, N'Mr.', N'Robert', N'R.', N'Vessa', NULL, N'Totes & Baskets Company', N'adventure-works\jillian0', N'robert13@adventure-works.com', N'560-555-0171', N'UWGC2U8F7AUNA2FuiT4agrBoxAFskHGQSxqP39B7zLQ=', N'iES3IZA=', N'6f08e2fb-1cd3-4f6e-a2e6-385669598b19', CAST(N'2001-08-01T00:00:00.000' AS DateTime)),
 (30118, 0, N'Ms.', N'Caroline', N'A.', N'Vicknair', NULL, N'World of Bikes', N'adventure-works\jillian0', N'caroline0@adventure-works.com', N'695-555-0158', N'U1/CrPqSzwLTtwgBehfpIl7f1LHSFpZw1qnG1sMzFjo=', N'QhHP+y8=', N'2495b4eb-fe8b-459e-a1b6-dba25c04e626', CAST(N'2002-09-01T00:00:00.000' AS DateTime))
+GO
 
 SET IDENTITY_INSERT [Customer] OFF
+GO
 
 DBCC CHECKIDENT(Customer, RESEED)
