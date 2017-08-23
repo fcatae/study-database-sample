@@ -15,6 +15,7 @@ CREATE TABLE [Customer]
 	[PasswordSalt] 	[varchar](10)			NOT NULL,
 	[rowguid] 		[uniqueidentifier]		NOT NULL,
 	[ModifiedDate] 	[datetime]				NOT NULL,
+    [Description]   [CHAR](7000)            NULL
  CONSTRAINT [PK_Customer_CustomerID] PRIMARY KEY CLUSTERED ([CustomerID]),
  CONSTRAINT [UNI_Customer_rowguid] UNIQUE NONCLUSTERED ([rowguid])
 )

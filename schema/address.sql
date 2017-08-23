@@ -9,5 +9,6 @@ CREATE TABLE [Address]
 	[PostalCode]    [VARCHAR](15)		NOT NULL,
 	[rowguid]       [uniqueidentifier]  NOT NULL,
 	[ModifiedDate]  [datetime]			NOT NULL,
+    [Description]   [CHAR](7000)        NULL
  CONSTRAINT [UNI_Address_rowguid] UNIQUE NONCLUSTERED ([rowguid])
 )
