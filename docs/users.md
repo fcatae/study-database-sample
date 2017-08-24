@@ -89,37 +89,3 @@ User:
 ```sql
 ALTER USER <username> WITH PASSWORD='<password>'
 ```
-
-## External Table ##
-
-```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
-
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
-WITH IDENTITY = '<username>',
-SECRET = '<password>';
-
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc 
-WITH (
-    TYPE = RDBMS, 
-    LOCATION = '<server_name>.database.windows.net', 
-    DATABASE_NAME = 'Customers', 
-    CREDENTIAL = SQL_Credential 
-);
-
-CREATE EXTERNAL TABLE [dbo].[all_dm_exec_requests]([session_id] smallint NOT NULL,  
-  [request_id] int NOT NULL,  
-  [start_time] datetime NOT NULL,   
-  [status] nvarchar(30) NOT NULL,  
-  [command] nvarchar(32) NOT NULL,  
-  [sql_handle] varbinary(64),  
-  [statement_start_offset] int,  
-  [statement_end_offset] int,  
-  [cpu_time] int NOT NULL)  
-WITH  
-(  
-  DATA_SOURCE = MyExtSrc,  
-  SCHEMA_NAME = 'sys',  
-  OBJECT_NAME = 'dm_exec_requests'
-);   
-```
