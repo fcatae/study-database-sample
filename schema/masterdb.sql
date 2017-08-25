@@ -1,18 +1,15 @@
+select * from sys.sql_logins
 select * from sys.database_principals
 select * from sys.databases
 select * from sys.elastic_pool_resource_stats
 
-create login oabc with password='marcos#fiap1'
+EXEC('create database DB09 as copy of LabModel')
+-- select * from sys.dm_database_copies
 
-select * from sys.objects where name like '%data%'
+DECLARE @pwd VARCHAR(100)
+EXEC('create login u08 with password=''' + @pwd + '''')
 
-select * from sys.sql_logins
-
-EXEC('create database DB06 as copy of LabModel')
-
-DECLARE @pwd VARCHAR(100) = 'fiap#2017'
-EXEC('create login u04 with password=''' + @pwd + '''')
-
+-- MASTERDB
 CREATE DATABASE MASTERDB
 ALTER DATABASE MASTERDB
 modify (SERVICE_OBJECTIVE=ELASTIC_POOL(NAME=DBS))
@@ -39,7 +36,7 @@ DECLARE @db VARCHAR(30) =  @dbname;
 	);
 GO
 
-EXEC setupDataSource 'sqlfcatae', 'DB06'
+EXEC setupDataSource 'sqlfcatae', 'DB08'
 drop external data source LabData
 
 select * from sys.external_data_sources
@@ -59,9 +56,19 @@ sp_execute_remote N'LabData',
 sp_execute_remote N'LabData', 
 		N'setupUser @loginname, @username', 
 		N'@loginname VARCHAR(50), @username VARCHAR(50)',
-		'u04',
-		'dev'
+		'u08',
+		'u08'
 
 sp_execute_remote N'LabData', 
-		N'grant execute on setup to dev'
-		
+		N'setupRunAs @username',
+		N'@username VARCHAR(50)',
+		'dev'
+
+CREATE PROC setupRunAs(@username VARCHAR(50))
+WITH EXECUTE AS OWNER
+AS
+EXEC('EXEC(''setup'') AS USER=''' + @username + '''');
+
+-- fix permission
+sp_execute_remote N'LabData', 
+		N'grant showplan to u08'
