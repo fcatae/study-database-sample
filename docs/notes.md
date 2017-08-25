@@ -4,3 +4,7 @@ https://social.msdn.microsoft.com/Forums/sqlserver/en-US/caa35f7d-7172-4fab-8bda
 
 Connect bug
 http://connect.microsoft.com/SQLServer/feedbackdetail/view/272964/using-default-schema-in-stored-procedures
+
+
+DDL Triggers
+https://docs.microsoft.com/en-us/sql/relational-databases/triggers/use-the-eventdata-function
