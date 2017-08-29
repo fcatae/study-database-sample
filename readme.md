@@ -6,6 +6,9 @@ Esse banco de dados é uma versão simplificada de AdventureWorks, contendo some
 * Address
 * CustomerAddress
 
+![Modelagem](/images/model.png)
+
+
 ## Setup ##
 
 O script [database_script.sql](database_script.sql) contém a definição de schema e massa de dados. 
