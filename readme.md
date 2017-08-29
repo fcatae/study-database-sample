@@ -8,7 +8,7 @@ Esse banco de dados é uma versão simplificada de AdventureWorks, contendo some
 
 ## Setup ##
 
-O script [database_script.sql]() contém a definição de schema e massa de dados. 
+O script [database_script.sql](database_script.sql) contém a definição de schema e massa de dados. 
 Os detalhes do script estão divididos em arquivos menores nos diretórios `/data` e `/schema`.
 
 ## Ambiente Multiusuários (Laboratório) ##
