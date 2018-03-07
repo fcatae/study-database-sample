@@ -97,7 +97,7 @@ GO
 
 DROP PROC setupUser
 GO
-CREATE PROC setupUser(@loginname VARCHAR(50))
+CREATE PROC setupUser(@loginname VARCHAR(50), @pwd VARCHAR(50))
 WITH EXECUTE AS OWNER
 AS
 SET XACT_ABORT ON
@@ -108,18 +108,20 @@ DECLARE @schema VARCHAR(100) = @user;
 
 -- create the user
 PRINT 'create the user: ' + @user
-SELECT * FROM sys.database_principals
-IF USER_ID(@loginname) is NULL
-	EXEC('CREATE USER ' + @user + ' FROM LOGIN ' + @login + ' WITH DEFAULT_SCHEMA=' + @schema );
-IF SCHEMA_ID(@loginname) is NULL
-	EXEC('CREATE SCHEMA ' + @schema + ' AUTHORIZATION ' + @user);
+IF SCHEMA_ID(@loginname) is not NULL
+	EXEC('DROP SCHEMA ' + @schema)
+IF USER_ID(@loginname) is not NULL
+	EXEC('DROP USER ' + @user)
+
+EXEC('CREATE USER ' + @user + ' WITH PASSWORD=''' + @pwd + ''', DEFAULT_SCHEMA=' + @schema );
+EXEC('CREATE SCHEMA ' + @schema + ' AUTHORIZATION ' + @user);
 
 -- ALTER/CREATE permission
 PRINT 'ALTER/CREATE permission'
 EXEC('GRANT CREATE TABLE TO ' + @user );
-EXEC('GRANT ALTER ON schema::' + @schema + ' TO ' + @user );
+--EXEC('GRANT ALTER ON schema::' + @schema + ' TO ' + @user );
 
 -- setup permission
 PRINT 'setup permission'
-EXEC('GRANT EXECUTE ON setup TO ' + @user );
+EXEC('GRANT EXECUTE TO ' + @user );
 GO
