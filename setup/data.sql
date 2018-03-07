@@ -19,21 +19,21 @@ EXEC('INSERT [CustomerAddress] ([CustomerID], [AddressID], [AddressType], [rowgu
 GO
 
 CREATE   PROC GetData_Address
-EXECUTE AS OWNER
+WITH EXECUTE AS OWNER
 AS
 SELECT [AddressID], [AddressLine1], [AddressLine2], [City], [StateProvince], [CountryRegion], [PostalCode], [rowguid], [ModifiedDate]
 FROM dbo.[Address]
 GO
 
 CREATE   PROC GetData_Customer
-EXECUTE AS OWNER
+WITH EXECUTE AS OWNER
 AS
 SELECT [CustomerID], [NameStyle], [Title], [FirstName], [MiddleName], [LastName], [Suffix], [CompanyName], [SalesPerson], [EmailAddress], [Phone], [PasswordHash], [PasswordSalt], [rowguid], [ModifiedDate] 
 FROM dbo.[Customer]
 GO
 
 CREATE   PROC GetData_CustomerAddress
-EXECUTE AS OWNER
+WITH EXECUTE AS OWNER
 AS
 SELECT [CustomerID], [AddressID], [AddressType], [rowguid], [ModifiedDate]
 FROM dbo.[CustomerAddress]
